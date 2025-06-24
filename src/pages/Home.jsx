@@ -2,7 +2,7 @@
 
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import Typed from "react-typed";
+import { Typewriter } from 'react-simple-typewriter';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import profilePic from "../assets/sandip.jpg";
@@ -43,13 +43,19 @@ const Home = () => {
 
           <div className="text-center md:text-left" data-aos="fade-left">
             <h1 className="text-5xl md:text-6xl font-extrabold text-blue-700 mb-4 leading-tight">
-              <Typed
-                strings={["NextEra Coders 🚀", "Master DSA ✨", "Learn Web Dev 💻", "Crack Interviews 🎯"]}
-                typeSpeed={70}
-                backSpeed={40}
-                loop
-              />
-            </h1>
+  <span className="text-blue-700 font-extrabold">
+    <Typewriter
+      words={["NextEra Coders 🚀", "Master DSA ✨", "Learn Web Dev 💻", "Crack Interviews 🎯"]}
+      loop={true}
+      cursor
+      cursorStyle="|"
+      typeSpeed={70}
+      deleteSpeed={40}
+      delaySpeed={1000}
+    />
+  </span>
+</h1>
+
             <p className="text-lg text-gray-700 max-w-xl mt-3">
               One platform for all your coding needs — Practice, Learn, and Crack top tech jobs with expert-led tutorials and projects.
             </p>
