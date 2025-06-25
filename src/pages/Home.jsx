@@ -1,161 +1,382 @@
 
 
+// import React, { useEffect } from "react";
+// import { Link } from "react-router-dom";
+// import { Typewriter } from 'react-simple-typewriter';
+// import AOS from "aos";
+// import "aos/dist/aos.css";
+// import profilePic from "../assets/sandip.jpg";
+
+// const Home = () => {
+//   useEffect(() => {
+//     AOS.init({ duration: 1000 });
+//   }, []);
+
+//   const videoIds = ["j-1d6zcgd3U", "g5uH4yhYz3Q","HtHU5ucWYQw"];
+//   const testimonials = [
+//     { name: "Vipul", text: "NextEra Coders helped me land my first internship!" },
+//     { name: "Naveen", text: "Best oneshot Javascript yt video from beginners to advanced level ❤" },
+//     { name: "Shivam", text: "Good project with proper explanation" },
+//     { name: "Priya", text: "Best JS tutorials and projects for practice!" },
+//   ];
+
+//   const stats = [
+//     { label: "Happy Coders", value: "25,000+" },
+//     { label: "Subscribers", value: "10,000+" },
+//     { label: "Projects Completed", value: "30+" },
+//     { label: "Hours of Content", value: "500+" },
+//   ];
+
+//   return (
+//     <div className="pt-5 bg-gray-50 min-h-screen text-gray-800">
+//       {/* Hero Section */}
+//       <section className="text-center px-6 py-24 bg-gradient-to-br from-blue-100 to-blue-50" data-aos="fade-up">
+//         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8">
+//           <div className="flex flex-col items-center" data-aos="zoom-in">
+//             <img
+//               src={profilePic}
+//               alt="Sandip Kumar Verma"
+//               className="w-36 h-36 md:w-40 md:h-40 rounded-full border-4 border-blue-500 shadow-md"
+//             />
+//             <p className="text-base text-gray-600 mt-2 font-medium">👨‍💻 Sandip Kumar Verma</p>
+//           </div>
+
+//           <div className="text-center md:text-left" data-aos="fade-left">
+//             <h1 className="text-5xl md:text-6xl font-extrabold text-blue-700 mb-4 leading-tight">
+//   <span className="text-blue-700 font-extrabold">
+//     <Typewriter
+//       words={["NextEra Coders 🚀", "Master DSA ✨", "Learn Web Dev 💻", "Crack Interviews 🎯"]}
+//       loop={true}
+//       cursor
+//       cursorStyle="|"
+//       typeSpeed={70}
+//       deleteSpeed={40}
+//       delaySpeed={1000}
+//     />
+//   </span>
+// </h1>
+
+//             <p className="text-lg text-gray-700 max-w-xl mt-3">
+//               One platform for all your coding needs — Practice, Learn, and Crack top tech jobs with expert-led tutorials and projects.
+//             </p>
+//             <Link
+//               to="/login"
+//               className="inline-block mt-6 px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-lg font-semibold transition"
+//             >
+//               🚀 Start Your Journey
+//             </Link>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Stats Section */}
+//       <section className="py-16 px-6 bg-white" data-aos="fade-up">
+//         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+//           {stats.map((stat, index) => (
+//             <div key={index} className="p-6 bg-blue-50 rounded-lg shadow">
+//               <h3 className="text-2xl md:text-3xl font-bold text-blue-700 mb-2">{stat.value}</h3>
+//               <p className="text-gray-600 text-sm">{stat.label}</p>
+//             </div>
+//           ))}
+//         </div>
+//       </section>
+
+//       {/* Features Section */}
+//       <section className="py-20 px-4 max-w-6xl mx-auto grid gap-12 md:grid-cols-2 lg:grid-cols-4" data-aos="fade-up">
+//         {[
+//           { title: "DSA Practice", desc: "Solve 1000+ curated problems & track progress.", emoji: "🧠", link: "/practice" },
+//           { title: "Code Editor", desc: "Write & run code in multiple languages.", emoji: "💻", link: "/editor" },
+//           { title: "Courses", desc: "Master full stack, JS, React, Next.js & more.", emoji: "📚", link: "/courses" },
+//           { title: "DSA full course", desc: "Follow structured paths from basics to expert.", emoji: "🗺️", link: "/dsa" },
+//         ].map((f, i) => (
+//           <Link
+//             to={f.link}
+//             key={i}
+//             className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border border-gray-200"
+//             data-aos="zoom-in"
+//           >
+//             <div className="text-5xl mb-4">{f.emoji}</div>
+//             <h3 className="text-2xl font-bold text-blue-700 mb-2">{f.title}</h3>
+//             <p className="text-gray-600 text-sm leading-relaxed">{f.desc}</p>
+//           </Link>
+//         ))}
+//       </section>
+
+//       {/* Why Choose Us Section */}
+//       <section className="py-20 px-4 bg-white border-t border-gray-200" data-aos="fade-up">
+//         <div className="max-w-5xl mx-auto text-center">
+//           <h2 className="text-4xl font-bold text-blue-700 mb-10">
+//             Why Choose <span className="text-blue-500">NextEra Coders</span>?
+//           </h2>
+//           <div className="grid gap-6 md:grid-cols-3">
+//             {["Structured Roadmaps", "Hands-On Projects", "Beginner to Advanced Levels"].map((point, i) => (
+//               <div key={i} className="p-8 rounded-lg shadow-md bg-blue-50" data-aos="zoom-in">
+//                 <p className="font-medium text-blue-800 text-lg">✅ {point}</p>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+
+    
+//       {/* YouTube Videos */}
+// <section className="py-20 px-6 bg-gray-50 text-center" data-aos="fade-up">
+//   <h2 className="text-3xl font-bold mb-8 text-blue-700">Latest YouTube Videos</h2>
+//   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+//     {videoIds.map((id) => (
+//       <iframe
+//         key={id}
+//         src={`https://www.youtube.com/embed/${id}`}
+//         className="w-full aspect-video rounded-xl shadow-lg"
+//         allowFullScreen
+//         title={`YouTube video ${id}`}
+//       />
+//     ))}
+//   </div>
+// </section>
+
+
+//       {/* CTA Section */}
+//       <section className="py-20 px-6 text-center bg-blue-600 text-white" data-aos="fade-up">
+//         <h2 className="text-4xl font-extrabold mb-4">Join 10,000+ Coders on NextEra</h2>
+//         <p className="mb-6 text-lg">Your journey to become a top developer starts here.</p>
+//         <Link
+//           to="/login"
+//           className="inline-block px-8 py-3 bg-white text-blue-700 font-semibold rounded-full shadow hover:bg-gray-100"
+//         >
+//           Start Learning Now ➜
+//         </Link>
+//       </section>
+//     </div>
+//   );
+// };
+
+// export default Home;
+
+
+
+
+
+
+
+
+
+
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Typewriter } from 'react-simple-typewriter';
+import { Typewriter } from "react-simple-typewriter";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import profilePic from "../assets/sandip.jpg";
 
+/* ---------- Static Data ---------- */
+const VIDEO_IDS = ["j-1d6zcgd3U", "g5uH4yhYz3Q", "HtHU5ucWYQw"];
+
+const TESTIMONIALS = [
+  { name: "Vipul", text: "NextEra Coders helped me land my first internship!" },
+  { name: "Naveen", text: "Best one-shot JavaScript video from beginner to advanced level ❤" },
+  { name: "Shivam", text: "Good project with proper explanation" },
+  { name: "Priya", text: "Best JS tutorials and projects for practice!" }
+];
+
+const STATS = [
+  { label: "Happy Coders", value: "25,000+" },
+  { label: "Subscribers", value: "10,000+" },
+  { label: "Projects Completed", value: "30+" },
+  { label: "Hours of Content", value: "500+" }
+];
+
+const FEATURES = [
+  { title: "DSA Practice", desc: "Solve 1 000+ curated problems & track progress.", emoji: "🧠", link: "/practice" },
+  { title: "Code Editor", desc: "Write & run code in multiple languages.", emoji: "💻", link: "/editor" },
+  { title: "Courses", desc: "Master full-stack, JS, React, Next.js & more.", emoji: "📚", link: "/courses" },
+  { title: "DSA Full Course", desc: "Follow structured paths from basics to expert.", emoji: "🗺️", link: "/dsa" }
+];
+
+/* ---------- Component ---------- */
 const Home = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({ duration: 800, once: true });
   }, []);
 
-  const videoIds = ["j-1d6zcgd3U", "g5uH4yhYz3Q","HtHU5ucWYQw"];
-  const testimonials = [
-    { name: "Vipul", text: "NextEra Coders helped me land my first internship!" },
-    { name: "Naveen", text: "Best oneshot Javascript yt video from beginners to advanced level ❤" },
-    { name: "Shivam", text: "Good project with proper explanation" },
-    { name: "Priya", text: "Best JS tutorials and projects for practice!" },
-  ];
-
-  const stats = [
-    { label: "Happy Coders", value: "25,000+" },
-    { label: "Subscribers", value: "10,000+" },
-    { label: "Projects Completed", value: "30+" },
-    { label: "Hours of Content", value: "500+" },
-  ];
-
   return (
-    <div className="pt-5 bg-gray-50 min-h-screen text-gray-800">
-      {/* Hero Section */}
-      <section className="text-center px-6 py-24 bg-gradient-to-br from-blue-100 to-blue-50" data-aos="fade-up">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8">
-          <div className="flex flex-col items-center" data-aos="zoom-in">
+    <main className="min-h-screen bg-gray-50 text-gray-800 pt-5">
+      {/* HERO */}
+      <section
+        className="relative isolate overflow-hidden px-6 py-20 sm:py-24 bg-gradient-to-br from-blue-100 to-blue-50"
+        data-aos="fade-up"
+      >
+        <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 md:flex-row">
+          {/* Avatar */}
+          <figure className="flex flex-col items-center" data-aos="zoom-in">
             <img
               src={profilePic}
-              alt="Sandip Kumar Verma"
-              className="w-36 h-36 md:w-40 md:h-40 rounded-full border-4 border-blue-500 shadow-md"
+              alt="Sandip Kumar Verma smiling in front of a laptop"
+              className="h-36 w-36 rounded-full border-4 border-blue-500 object-cover shadow-md md:h-40 md:w-40"
             />
-            <p className="text-base text-gray-600 mt-2 font-medium">👨‍💻 Sandip Kumar Verma</p>
-          </div>
+            <figcaption className="mt-2 text-base font-medium text-gray-600">
+              👨‍💻 Sandip Kumar Verma
+            </figcaption>
+          </figure>
 
-          <div className="text-center md:text-left" data-aos="fade-left">
-            <h1 className="text-5xl md:text-6xl font-extrabold text-blue-700 mb-4 leading-tight">
-  <span className="text-blue-700 font-extrabold">
-    <Typewriter
-      words={["NextEra Coders 🚀", "Master DSA ✨", "Learn Web Dev 💻", "Crack Interviews 🎯"]}
-      loop={true}
-      cursor
-      cursorStyle="|"
-      typeSpeed={70}
-      deleteSpeed={40}
-      delaySpeed={1000}
-    />
-  </span>
-</h1>
-
-            <p className="text-lg text-gray-700 max-w-xl mt-3">
-              One platform for all your coding needs — Practice, Learn, and Crack top tech jobs with expert-led tutorials and projects.
+          {/* Pitch */}
+          <header className="text-center md:text-left" data-aos="fade-left">
+            <h1 className="mb-4 text-4xl font-extrabold leading-tight text-blue-700 sm:text-5xl md:text-6xl">
+              <span>
+                <Typewriter
+                  words={[
+                    "NextEra Coders 🚀",
+                    "Master DSA ✨",
+                    "Learn Web Dev 💻",
+                    "Crack Interviews 🎯"
+                  ]}
+                  loop
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={70}
+                  deleteSpeed={40}
+                  delaySpeed={1000}
+                />
+              </span>
+            </h1>
+            <p className="mx-auto max-w-xl text-lg text-gray-700">
+              One platform for all your coding needs — practice, learn, and crack top tech jobs with
+              expert-led tutorials & projects.
             </p>
             <Link
               to="/login"
-              className="inline-block mt-6 px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-lg font-semibold transition"
+              className="mt-6 inline-block rounded-full bg-blue-600 px-8 py-3 text-lg font-semibold text-white shadow transition hover:bg-blue-700"
             >
               🚀 Start Your Journey
             </Link>
-          </div>
+          </header>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 px-6 bg-white" data-aos="fade-up">
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {stats.map((stat, index) => (
-            <div key={index} className="p-6 bg-blue-50 rounded-lg shadow">
-              <h3 className="text-2xl md:text-3xl font-bold text-blue-700 mb-2">{stat.value}</h3>
-              <p className="text-gray-600 text-sm">{stat.label}</p>
+      {/* STATS */}
+      <section className="bg-white px-6 py-16" data-aos="fade-up">
+        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 text-center sm:grid-cols-4">
+          {STATS.map(({ label, value }) => (
+            <div key={label} className="rounded-lg bg-blue-50 p-6 shadow">
+              <h3 className="mb-2 text-2xl font-bold text-blue-700 sm:text-3xl">{value}</h3>
+              <p className="text-sm text-gray-600">{label}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 max-w-6xl mx-auto grid gap-12 md:grid-cols-2 lg:grid-cols-4" data-aos="fade-up">
-        {[
-          { title: "DSA Practice", desc: "Solve 1000+ curated problems & track progress.", emoji: "🧠", link: "/practice" },
-          { title: "Code Editor", desc: "Write & run code in multiple languages.", emoji: "💻", link: "/editor" },
-          { title: "Courses", desc: "Master full stack, JS, React, Next.js & more.", emoji: "📚", link: "/courses" },
-          { title: "DSA full course", desc: "Follow structured paths from basics to expert.", emoji: "🗺️", link: "/dsa" },
-        ].map((f, i) => (
+      {/* FEATURES */}
+      <section
+        className="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:grid-cols-2 lg:grid-cols-4"
+        data-aos="fade-up"
+      >
+        {FEATURES.map(({ title, desc, emoji, link }) => (
           <Link
-            to={f.link}
-            key={i}
-            className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border border-gray-200"
+            to={link}
+            key={title}
+            className="rounded-xl border border-gray-200 bg-white p-8 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
             data-aos="zoom-in"
           >
-            <div className="text-5xl mb-4">{f.emoji}</div>
-            <h3 className="text-2xl font-bold text-blue-700 mb-2">{f.title}</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">{f.desc}</p>
+            <div className="mb-4 text-5xl">{emoji}</div>
+            <h3 className="mb-2 text-2xl font-bold text-blue-700">{title}</h3>
+            <p className="text-sm leading-relaxed text-gray-600">{desc}</p>
           </Link>
         ))}
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-20 px-4 bg-white border-t border-gray-200" data-aos="fade-up">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-blue-700 mb-10">
+      {/* WHY CHOOSE US */}
+      <section className="bg-white px-4 py-20" data-aos="fade-up">
+        <div className="mx-auto max-w-5xl text-center">
+          <h2 className="mb-10 text-4xl font-bold text-blue-700">
             Why Choose <span className="text-blue-500">NextEra Coders</span>?
           </h2>
-          <div className="grid gap-6 md:grid-cols-3">
-            {["Structured Roadmaps", "Hands-On Projects", "Beginner to Advanced Levels"].map((point, i) => (
-              <div key={i} className="p-8 rounded-lg shadow-md bg-blue-50" data-aos="zoom-in">
-                <p className="font-medium text-blue-800 text-lg">✅ {point}</p>
+          <div className="grid gap-6 sm:grid-cols-3">
+            {[
+              "Structured Roadmaps",
+              "Hands-On Projects",
+              "Beginner → Advanced Levels"
+            ].map((point) => (
+              <div
+                key={point}
+                className="rounded-lg bg-blue-50 p-8 shadow-md"
+                data-aos="zoom-in"
+              >
+                <p className="text-lg font-medium text-blue-800">✅ {point}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-    
-      {/* YouTube Videos */}
-<section className="py-20 px-6 bg-gray-50 text-center" data-aos="fade-up">
-  <h2 className="text-3xl font-bold mb-8 text-blue-700">Latest YouTube Videos</h2>
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-    {videoIds.map((id) => (
-      <iframe
-        key={id}
-        src={`https://www.youtube.com/embed/${id}`}
-        className="w-full aspect-video rounded-xl shadow-lg"
-        allowFullScreen
-        title={`YouTube video ${id}`}
-      />
-    ))}
-  </div>
-</section>
+      {/* YOUTUBE */}
+      <section className="bg-gray-50 px-6 py-20 text-center" data-aos="fade-up">
+        <h2 className="mb-8 text-3xl font-bold text-blue-700">Latest YouTube Videos</h2>
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {VIDEO_IDS.map((id) => (
+            <iframe
+              key={id}
+              src={`https://www.youtube.com/embed/${id}`}
+              title={`YouTube video ${id}`}
+              loading="lazy"
+              allowFullScreen
+              className="aspect-video w-full rounded-xl shadow-lg"
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* Coders comment  */}
+      <section
+        className="bg-white px-6 py-20"
+        data-aos="fade-up"
+      >
+        <h2 className="mb-10 text-3xl font-bold text-center text-blue-700">
+          What Our Learners Say
+        </h2>
+
+        <div className="mx-auto grid max-w-5xl gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {TESTIMONIALS.map(({ name, text }) => (
+            <figure
+              key={name}
+              className="flex flex-col justify-between rounded-xl bg-blue-50 p-6 shadow hover:-translate-y-1 hover:shadow-lg transition"
+              data-aos="zoom-in"
+            >
+              <blockquote className="mb-4 text-sm leading-relaxed text-gray-700">
+                “{text}”
+              </blockquote>
+              <figcaption className="mt-auto text-right text-sm font-semibold text-blue-800">
+                — {name}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
 
 
-      {/* CTA Section */}
-      <section className="py-20 px-6 text-center bg-blue-600 text-white" data-aos="fade-up">
-        <h2 className="text-4xl font-extrabold mb-4">Join 10,000+ Coders on NextEra</h2>
-        <p className="mb-6 text-lg">Your journey to become a top developer starts here.</p>
+
+      {/* CALL-TO-ACTION */}
+      <section
+        className="bg-blue-600 px-6 py-20 text-center text-white"
+        data-aos="fade-up"
+      >
+        <h2 className="mb-4 text-3xl font-extrabold sm:text-4xl">
+          Join 10 000+ Coders on NextEra
+        </h2>
+        <p className="mb-6 text-lg">
+          Your journey to become a top developer starts here.
+        </p>
         <Link
           to="/login"
-          className="inline-block px-8 py-3 bg-white text-blue-700 font-semibold rounded-full shadow hover:bg-gray-100"
+          className="inline-block rounded-full bg-white px-8 py-3 font-semibold text-blue-700 shadow transition hover:bg-gray-100"
         >
           Start Learning Now ➜
         </Link>
       </section>
-    </div>
+    </main>
   );
 };
 
 export default Home;
-
-
-
-
 
 
 

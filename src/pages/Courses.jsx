@@ -30,7 +30,7 @@ const Courses = () => {
       </div>
 
       {/* Heading */}
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center text-blue-700 dark:text-blue-400 mb-15">
+      <h2 className="text-3xl sm:text-3xl md:text-4xl font-semibold text-center font-bold text-blue-600 dark:text-blue-400 mb-8">
         📚 Our YouTube Courses
       </h2>
 

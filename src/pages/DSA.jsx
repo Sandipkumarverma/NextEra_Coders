@@ -107,7 +107,7 @@ const DSA = () => {
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 p-4">
       <div className="mb-4 flex flex-col sm:flex-row sm:justify-between sm:items-center">
-        <h1 className="text-3xl font-bold text-white mb-2 sm:mb-0 pl-10">DSA Topics</h1>
+        <h1 className="text-3xl font-bold text-blue-600 mb-2 sm:mb-0 pl-10">DSA Topics</h1>
         <input
           type="text"
           placeholder="🔍 Search topics..."

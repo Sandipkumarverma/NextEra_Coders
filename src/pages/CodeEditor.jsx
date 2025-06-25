@@ -133,7 +133,7 @@ const EditorPage = () => {
 
   return (
     <div className={`flex flex-col min-h-screen ${isFullScreen ? "fixed top-0 left-0 w-full h-full z-[9999] bg-black" : darkMode ? "bg-[#1e1e1e] text-white" : "bg-white text-gray-900"}`}>
-      <div className="flex flex-wrap justify-between items-center gap-2 p-4 bg-gray-800 dark:bg-gray-700 z-50">
+      <div className="flex flex-wrap justify-between items-center gap-2 p-4 bg-gray-800 dark:bg-gray-700 z-30">
         <div className="flex flex-wrap items-center gap-3">
           <select
             value={language}
@@ -188,3 +188,17 @@ const EditorPage = () => {
 };
 
 export default EditorPage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

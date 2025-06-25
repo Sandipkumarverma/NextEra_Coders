@@ -108,11 +108,27 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="bg-blue-200 py-3 text-center text-xs text-gray-700">
-        © {new Date().getFullYear()} <span className="font-semibold text-blue-800">NextEra Coders</span>. Made with ❤️ by Sandip Kumar Verma.
-      </div>
+<div className="bg-gradient-to-tr from-blue-100 via-blue-200 to-blue-100 py-5 px-4 text-center border-t border-blue-300">
+  <p className="text-[13px] sm:text-sm text-gray-800 flex flex-col sm:flex-row justify-center items-center gap-1 sm:gap-2">
+    <span>
+      © {new Date().getFullYear()}{" "}
+      <span className="text-blue-800 font-bold hover:underline hover:text-blue-900 transition-all duration-300 cursor-pointer">
+        NextEra Coders
+      </span>
+    </span>
+    <span className="text-gray-500 hidden sm:inline">|</span>
+    <span>
+      Built with <span className="animate-pulse text-red-800">❤️</span> by{" "}
+      <span className="text-blue-700 font-semibold hover:underline cursor-pointer">
+        Sandip Kumar Verma
+      </span>
+    </span>
+  </p>
+</div>
+
     </footer>
   );
 };
 
 export default Footer;
+

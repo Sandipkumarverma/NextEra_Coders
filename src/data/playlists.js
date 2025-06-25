@@ -123,18 +123,7 @@ export const coursePlaylists = {
         id: "TxUEF86zzPU",
         title: "JavaScript Error Handling Explained 🔥"
       },
-      {
-        id: "",
-        title: "upcoming.."
-      },
-      {
-        id: "",
-        title: "upcoming.."
-      },
-      {
-        id: "",
-        title: "upcoming.."
-      },
+     
 
     ]
   },
