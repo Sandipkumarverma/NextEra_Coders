@@ -155,18 +155,18 @@ const Profile = () => {
     onError={(e) => { e.currentTarget.src = "https://i.imgur.com/8Km9tLL.png"; }}
     /* ✨ look & feel */
     className="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-4 border-blue-500
-               shadow-md object-cover transition-transform duration-300
-               group-hover:scale-105"
+           shadow-md object-cover transition-transform duration-300 hover:scale-105"
+
   />
   {/* 🖊️ edit button appears only on hover */}
   <button
-    onClick={() => setEditMode(true)}
-    className="absolute bottom-1 right-1 bg-blue-600 text-white p-1 rounded-full
-               opacity-0 group-hover:opacity-100 transition"
-    aria-label="Edit profile"
-  >
-    <FaEdit size={14} />
-  </button>
+  onClick={() => setEditMode(true)}
+  className="absolute bottom-1 right-1 bg-blue-600 text-white p-1 rounded-full shadow-md hover:scale-105 transition-all"
+  aria-label="Edit profile"
+>
+  <FaEdit size={14} />
+</button>
+
 </div>
 
 
