@@ -1,7 +1,7 @@
 export const coursePlaylists = {
   js: {
-    title: "JavaScript Complete Tutorial",
-    description: "Complete JavaScript course from beginner to advanced.",
+    title: "Professional JavaScript Developer Course",
+    description: "Make your websites interactive with JavaScript. Learn variables, functions, loops, and DOM manipulation to build dynamic and user-friendly web applications.",
     videos: [
       {
         id: "j-1d6zcgd3U",
@@ -130,8 +130,8 @@ export const coursePlaylists = {
 
   // Add other course IDs later
    html: {
-    title: "HTML Complete Tutorial ",
-    description: "Complete JavaScript course from beginner to advanced.",
+    title: "HTML5 Foundations for Modern Web Development",
+    description: "Learn the foundation of web development with HTML5. This course teaches you how to create structured and semantic web pages with real-world examples.",
     videos: [     
       {
         id: "g5uH4yhYz3Q",
@@ -205,8 +205,8 @@ export const coursePlaylists = {
 
   // Add other course IDs later
    css: {
-    title: "CSS Complete Course",
-    description: "Complete CSS course from beginner to advanced.",
+    title: "CSS Styling and Responsive Design Essentials",
+    description: "Style your websites like a pro using CSS3. Master layouts, colors, Flexbox, Grid, and responsive design to make your web pages look stunning on any device.",
     videos: [     
       {
         id: "HtHU5ucWYQw",

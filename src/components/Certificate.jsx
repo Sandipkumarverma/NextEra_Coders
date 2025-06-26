@@ -26,7 +26,7 @@ const Certificate = ({ completedCount, totalVideos, courseTitle }) => {
     if (storedID) {
       setCertificateID(storedID);
     } else {
-      const newID = `CERT-${Date.now().toString().slice(-6)}`;
+      const newID = `NEC-${Date.now().toString().slice(-6)}`;
       localStorage.setItem("certificate-id", newID);
       setCertificateID(newID);
     }
@@ -62,80 +62,6 @@ const Certificate = ({ completedCount, totalVideos, courseTitle }) => {
     console.error("PDF download error:", error);
     toast.error("❌ Download failed. Check image or CORS.");
   }
-};
-
-const handlePrint = () => {
-  const certificate = certRef.current;
-  if (!certificate) {
-    toast.error("❌ Certificate reference not found.");
-    return;
-  }
-
-  const printWindow = window.open("", "_blank", "width=1200,height=800");
-  if (!printWindow) {
-    toast.error("❌ Unable to open print window. Please enable popups.");
-    return;
-  }
-
-  // Copy all styles from head
-  const headStyles = document.head.innerHTML;
-
-  // Clone certificate container
-  const clone = certificate.cloneNode(true);
-
-  // Inline the background color for print
-  clone.style.backgroundColor = getComputedStyle(certificate).backgroundColor;
-
-  // Add explicit border and styles inline
-  clone.style.boxShadow = getComputedStyle(certificate).boxShadow;
-  clone.style.borderRadius = getComputedStyle(certificate).borderRadius;
-
-  // Wrapper div
-  const wrapper = document.createElement("div");
-  wrapper.className = "print-area";
-  wrapper.style.width = "100%";
-  wrapper.style.height = "100%";
-  wrapper.style.display = "flex";
-  wrapper.style.justifyContent = "center";
-  wrapper.style.alignItems = "center";
-  wrapper.appendChild(clone);
-
-  // Write into print window
-  printWindow.document.write(`
-    <html>
-      <head>
-        ${headStyles}
-        <style>
-          @page {
-            size: A4 landscape;
-            margin: 0;
-          }
-          body {
-            margin: 0;
-            padding: 0;
-            background: white !important;
-          }
-          .print-area {
-            margin: 0;
-            padding: 0;
-          }
-        </style>
-      </head>
-      <body>
-        ${wrapper.outerHTML}
-      </body>
-    </html>
-  `);
-
-  printWindow.document.close();
-
-  printWindow.onload = () => {
-    setTimeout(() => {
-      printWindow.focus();
-      printWindow.print();
-      printWindow.close();
-    }, 700);
-  };
 };
 
 
@@ -244,7 +170,8 @@ const handlePrint = () => {
             ></div>
           ))}
 
-          <div className="w-full min-h-screen flex justify-center items-center bg-white px-2 sm:px-4 py-6 overflow-auto">
+          <div className="w-full min-h-[30vh] sm:min-h-screen flex justify-center items-center bg-white px-2 sm:px-4 py-4 sm:py-6 overflow-auto">
+
             <div
               ref={certRef}
               className="certificate-print-area relative w-full max-w-[98%] sm:max-w-4xl lg:max-w-5xl bg-[#fdfbe9] overflow-hidden font-serif shadow-2xl rounded-lg aspect-[16/9] sm:aspect-[16/9] max-[400px]:aspect-auto print:aspect-auto print:rounded-none print:shadow-none fade-in"
@@ -270,7 +197,7 @@ const handlePrint = () => {
 
       {/* Presented To */}
       <p className="text-[9px] max-[400px]:text-[6px] sm:text-xs font-semibold text-gray-700 mt-2">
-        This certificate is presented to
+        Presented to
       </p>
       <h2 className="text-lg max-[400px]:text-sm sm:text-2xl md:text-3xl font-bold text-yellow-700 italic my-2 break-words px-2">
         {userName}
@@ -283,7 +210,7 @@ const handlePrint = () => {
 
       {/* Subtext */}
       <p className="text-[9px] max-[400px]:text-[7px] sm:text-xs md:text-sm text-gray-700 mt-2 max-w-xl px-1">
-        In recognition of their hard work and successful completion of the course:
+        For the successful completion of the online course, demonstrating dedication and learning excellence in:
       </p>
       <p className="text-sm max-[400px]:text-xs sm:text-lg font-semibold text-[#0d294d] mt-1 break-words px-2">
         {courseTitle}
@@ -312,12 +239,7 @@ const handlePrint = () => {
             >
               📄 Download PDF
             </button>
-            <button
-              onClick={handlePrint}
-              className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
-            >
-              🖨️ Print
-            </button>
+            
             <button
               onClick={shareOnLinkedIn}
               className="bg-[#0A66C2] text-white px-4 py-2 rounded hover:bg-[#084a8c] transition"
